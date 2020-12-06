@@ -1,0 +1,20 @@
+###
+GET http://localhost:9096/api/v1/token
+Accept: application/json
+Content-Type: application/json
+
+###
+GET http://localhost:9096/api/v1/authorize
+Accept: application/json
+Content-Type: application/json
+
+###®
+
+GET http://localhost:9096/swagger/index.html
+Accept: application/json
+
+###
+
+GET http://localhost:9096/swagger/doc.json
+Accept: application/json
+
