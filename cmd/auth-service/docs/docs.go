@@ -18,125 +18,13 @@ var doc = `{
     "info": {
         "description": "{{.Description}}",
         "title": "{{.Title}}",
-        "termsOfService": "localhost:9096",
-        "contact": {
-            "name": "API Support",
-            "url": "localhost:9096",
-            "email": "admin@localhost"
-        },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-        },
+        "contact": {},
+        "license": {},
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {
-        "/authorize": {
-            "get": {
-                "description": "Authorize with Auth2",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "summary": "Authorize",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": true
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "$ref": "#/definitions/errors.Response"
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "$ref": "#/definitions/errors.Response"
-                        }
-                    }
-                }
-            }
-        },
-        "/token": {
-            "get": {
-                "description": "Retrieve auth2 access token",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "summary": "Retrieve access token",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": true
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "$ref": "#/definitions/errors.Response"
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "$ref": "#/definitions/errors.Response"
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "definitions": {
-        "errors.Response": {
-            "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string"
-                },
-                "error": {
-                    "type": "error"
-                },
-                "errorCode": {
-                    "type": "integer"
-                },
-                "header": {
-                    "type": "string"
-                },
-                "statusCode": {
-                    "type": "integer"
-                },
-                "uri": {
-                    "type": "string"
-                }
-            }
-        }
-    }
+    "paths": {}
 }`
 
 type swaggerInfo struct {
@@ -150,12 +38,12 @@ type swaggerInfo struct {
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = swaggerInfo{
-	Version:     "1.0",
-	Host:        "localhost:9096",
-	BasePath:    "/api/v1",
+	Version:     "",
+	Host:        "",
+	BasePath:    "",
 	Schemes:     []string{},
-	Title:       "Auth Service API",
-	Description: "This is a auth server",
+	Title:       "",
+	Description: "",
 }
 
 type s struct{}
