@@ -1,0 +1,9 @@
+GET http://localhost:9090/event
+Accept: application/json
+
+###
+
+POST http://localhost:9090/message
+Accept: application/json
+
+###
